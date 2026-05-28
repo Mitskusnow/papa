@@ -141,7 +141,7 @@ export default function App() {
     setProcessing(null);
     setShowMiniGame(false);
     setMiniGamePrize(null);
-    setMessage(`☀️ Day ${gameState.day} active! Upgrade Server Cores to outrun the 15s timer!`);
+    setMessage(`☀️ Day ${gameState.day} active! Upgrade Server Cores to outrun the 7s timer!`);
   };
 
   const handleEndDayTrigger = () => {
@@ -288,7 +288,7 @@ export default function App() {
       setMessage("❌ Out of tokens!");
       return;
     }
-    const currentDuration = [15, 11, 7, 4][gameState.upgrades.processingSpeed] || 15;
+    const currentDuration = [7, 5, 3, 1][gameState.upgrades.processingSpeed] || 7;
     
     setProcessing({ ticketId: activeTicketId, aiId: selectedAI, duration: currentDuration, elapsed: 0 });
     setMessage("⏳ Prompt engines are humming... Writing matrices!");
@@ -402,7 +402,7 @@ export default function App() {
       <div style={{ backgroundColor: '#e17055', padding: '15px', border: '4px solid #2d3436', borderRadius: '16px', marginBottom: '20px', color: 'white', display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
         <div>
           <h1 style={{ margin: 0, fontSize: '2.2rem', textShadow: '2px 2px 0px #000' }}>🍕 Papa's Prompt-eria!</h1>
-          <p style={{ margin: '5px 0 0 0', color: '#ffeaa7' }}>Boost your computing cores to slash prompt delivery pipelines below 15 seconds!</p>
+          <p style={{ margin: '5px 0 0 0', color: '#ffeaa7' }}>Boost your computing cores to slash prompt delivery pipelines below 7 seconds!</p>
         </div>
         {gameState.combo > 1 && (
           <div style={{ backgroundColor: '#fdcb6e', color: '#2d3436', padding: '10px 15px', borderRadius: '8px', fontWeight: 'bold', border: '2px solid #000' }}>
